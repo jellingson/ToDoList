@@ -34,12 +34,14 @@ function completeToDoItem(e) {
     completeContainer.appendChild(e);
 
     e.firstElementChild.innerText = "add";
-    let itemInput = document.getElementById("item-input");
-    itemInput.value = e.name;
+
 
     e.onclick = function() {
+        let itemInput = document.getElementById("item-input");
+        itemInput.value = e.name;
         addItemToList();
         completeContainer.removeChild(e);
+
     };
 }
 
@@ -48,7 +50,9 @@ function showOrHideCompleted() {
 
     if(completedContainer.style.display === "none") {
         completedContainer.style.display = "";
+        document.getElementById("show-completed-items").innerText = "expand_less";
     } else {
         completedContainer.style.display = "none";
+        document.getElementById("show-completed-items").innerText = "expand_more";
     }
 }
