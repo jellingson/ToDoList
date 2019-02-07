@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <script src="js/main.js"></script>
+    <style>
+        body {
+            background-color: #6da3f9;
+        }
+
+        h1 {
+            color: white;
+            font-size: 60px;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        .center {
+            margin:auto;
+            text-align: center;
+        }
+
+        .item {
+            border: #186199 2px solid;
+            border-radius: 5px;
+            margin: auto;
+            text-align: left;
+            padding: 10px;
+            width: 350px;
+            color: white;
+            font-size: 20px;
+            background-color: #74b8ed;
+            margin-top: 10px;
+        }
+
+        #no-text-warning {
+            color: white;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="center" style="width:500px;">
+        <h1>To Do List</h1>
+        <h2>Add items to your todo list below.</h2>
+        <div>
+            <input id="item-input" type="text" placeholder="Item to add" style="width: 400px; height: 28px; font-size: 20px">
+            <button onclick="addItemToList(this)" style="width: 50px; height: 32px; font-size: 20px">Add</button>
+            <div id="no-text-warning">Please enter an item into the text box above.</div>
+        </div>
+        <br>
+        <div id="todo-container"></div>
+        <br>
+        <h1>Completed List <i class="material-icons" style="cursor:default" onclick="showOrHideCompleted()">expand_more</i></h1>
+        <div style="display: none" id="complete-container"></div>
+    </div>
+</body>
+</html>
